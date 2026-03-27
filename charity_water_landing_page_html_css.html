@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Landing Page</title>
+
+  <!-- Proxima Nova (fallback included) -->
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Proxima Nova', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #F4F1EA;
+      color: #1A3C5A;
+    }
+
+    /* Header */
+    .header {
+      background-color: #7FA6B8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1A3C5A;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.7;
+    }
+
+    .logo-placeholder img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .donate-btn {
+      background-color: #0B3D6D;
+      color: #FCD116;
+      padding: 10px 22px;
+      border-radius: 30px;
+      border: 2px solid #FCD116;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #FCD116;
+      color: #0B3D6D;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* Scroll Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #E6BFA9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 70px 50px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hero-image img {
+      width: 320px;
+      border-radius: 25px;
+    }
+
+    /* Divider */
+    .divider {
+      background-color: #0B3D6D;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    /* Info Section */
+    .info {
+      background-color: #E7DFD1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 60px 50px;
+      gap: 30px;
+    }
+
+    .info-text {
+      max-width: 420px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .info-images {
+      display: flex;
+      gap: 20px;
+    }
+
+    .info-images img {
+      width: 190px;
+      border-radius: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .info-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .learn-btn {
+      margin-top: 25px;
+      padding: 10px 22px;
+      border-radius: 25px;
+      border: 2px solid #0B3D6D;
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .learn-btn:hover {
+      background-color: #0B3D6D;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background-color: #7FA6B8;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1A3C5A;
+      font-weight: 600;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .info {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-images {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header fade-in">
+    <div class="logo-placeholder">
+      <img src="https://via.placeholder.com/40" alt="Logo">
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Impact</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <button class="donate-btn">Donate now!</button>
+  </header>
+
+  <section class="hero fade-in">
+    <div class="hero-text">
+      <h1>Donate, Help, Contribute & make a difference.</h1>
+      <p>
+        Charity water makes donating fast, transparent, and meaningful so every dollar you give directly funds clean water projects, with real updates so you can be the difference.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/320" alt="Smiling child with water">
+    </div>
+  </section>
+
+  <div class="divider fade-in">
+    Where every dollar flows to clean water.
+  </div>
+
+  <section class="info fade-in">
+    <div class="info-text">
+      <p>
+        Straight from your phone to Ethiopia, Kenya, Uganda, Malawi, Mozambique, Bangladesh, India, Nepal, Bolivia, Guatemala, Haiti and many more...
+      </p>
+      <button class="learn-btn">Learn more about us...</button>
+    </div>
+
+    <div class="info-images">
+      <img src="https://via.placeholder.com/190" alt="Water container">
+      <img src="https://via.placeholder.com/190" alt="Workers drilling">
+      <img src="https://via.placeholder.com/190" alt="Clean water tap">
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Donate</a>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
